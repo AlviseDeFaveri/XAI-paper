@@ -9,7 +9,7 @@
 \usepackage{graphicx}
 \usepackage{todonotes}
 
-\newcommand{\note}{\todo[tickmarkheight=0.2cm]}
+\newcommand{\note}{\todo[]}
 
 \begin{document}
 
@@ -20,32 +20,42 @@
 %-----------------------------------------------------------------%
 \section{Introduction}
 
-\subsection{Artificial Intelligence and its shortcomings}
+Artificial Intelligence is receiving a lot of attention these days. \note{cit qualche numero} In recent years, Machine Learning in particular has opened a new perspective on what can be achieved with AI, and the deployment of this technology in real-world applications has resulted in tremendous benefits in many different fields: computer vision, voice recognition, data mining, and recently also Natural Language Processing has gotten to a whole new level. \note{fonte}
 
-It is a fact that Artificial Intelligence has become an increasingly mature and
-pervasive technology nowadays. From being a matter of pure scientific research,
-with vague goals and great expectations, it has grown to be one of the hottest
-technological trends \note{cit} right now, both in the academic and industry world, with a massive and constantly expanding industry revolving
-around it \note{cit} and a growing relevance in the public debate. Today, using some kind of
-AI solution to solve previously hard or infeasible problems is a trend in many fields, most notably some that weren't previously
-interested at all in technology, e.g. law and medicine \note{cit}.
+Because this kind of technology is so effective at solving complex and previously non-automatable problems, it is being used in increasingly sophisticated fields that tend to impact directly on our societies and day-by-day lives. Forms of AI systems are being used for legal and medical purposes, for self-driving cars, for mass surveillance and advertisement, for monitoring and moderating online platforms' content, and the list goes on \note{molte cit}.
 
-The reason why AI is spreading so aggressively as a technology is that it really outperforms previous solutions: \note{examples}.
+It has certainly made a long way since its original conception, and many stages of disillusionment had to be passed through before we could come at this level of maturity, but there are still some shady aspects of this technology that we are understanding only now, the first one being that we don't understand enough of it.
 
-However, its encounter with the real world has also shown us what are the limits of this technology, and even if its fast growth trend can convince someone that these limitations are just "technical" and can be solved easily with more power, there are some intrinsic facts that we are observing in many different AI technologies.
+\subsection{What's the problem with today's AI?}
 
-The first one is that, when it breaks, it breaks hard: a misprediction made by an AI system, especially if it has to accomplish a highly complex or impacting task, can cast a shade on the correctness of the whole model itself, on the data it has been trained on or on its design. There's rarely such thing as "fixing one line of code" on deep neural networks that have been trained on millions of data points.
+One very popular and effective type of Machine Learning techniques in use today is Supervised Learning. This approach generally consists in \textit{training} an algorithm by giving it as input a large number of instances of a given problem that we want to solve, e.g. a classification problem or some kind of prediction, and letting it figure out on its own how to rearrange its internals in a way that is suitable to output the expected results. The strength of these systems, and of Machine Learning in general, is that no previous knowledge of the model of the problem is needed, or should be enforced for that matter, and this is exactly where this technology gets an edge over more traditional computer science approaches.
 
-The second one is that these kind of errors are generally difficult to predict in advance: an AI algorithm can perform very well on a high number of inputs, but have a weak point that is only discovered way after the AI has been deployed. There is no general method to know in advance where an AI might fail, we just know that until now it has been pretty accurate.
+A general observation of how these systems behave in various fields have shown us one interesting fact: when these systems break, they tend to break hard.
+A misprediction made by an AI, especially if it has to accomplish a highly
+complex or impacting task, can cast a shade on the correctness of the whole
+model itself, on the data it has been trained on or on its design. There's
+rarely such thing as "fixing one line of code" on deep neural networks that have
+been trained on millions of data points: once its trained, you either add more data or start again from scratch, which can be a very high price to pay in terms of time and computational power.
 
-The third one is that at the moment we have very little introspection tools when examining an AI system, especially when we are talking about neural networks: the same people that design and train the algorithm have generally little knowledge about what model the network is going to produce at the end, and when it does the only way of verifying its correctness is black box testing, for which the input space is generally huge.
+Moreover, these kind of errors are generally difficult to predict
+in advance: an AI algorithm can perform very well on a high number of inputs,
+but have a weak point that is only discovered way after the AI has been
+deployed. There is no general method to know in advance where an AI might fail,
+we just know that until now it has been pretty accurate, which is one of the problems that XAI tries to address. As for today, we have very little introspection tools when
+examining an AI system, especially when we are talking about neural networks:
+the same people that design and train the algorithm have generally little
+knowledge about what model the network is going to produce at the end, and when
+it does the only way of verifying its correctness is black box testing, for
+which the input space is generally huge.
 
-All these points, together with market and newspapers hype, have encouraged the AI industry to tackle that which seems the hugest obstacle for AI being adopted everywhere: the problem of understanding an AI model and "opening" the black box.
+All these considerations have encouraged the AI industry and the governments to
+tackle that which seems the hugest obstacle for AI being adopted everywhere: the
+problem of understanding an AI model and "opening" the black box.
 
 \subsection{XAI: a new frontier of AI research}
 
-Explainable AI is a concept that was recently formalized in a call for
-research \note{cit} made by the DARPA, the same agency where the word "Artificial
+Explainable AI is a concept that was recently formalized in a call for research
+\note{cit} made by the DARPA, the same agency where the word "Artificial
 Intelligence" was born in the first place. It is meant to be describe a new set
 of Artificial Intelligence systems which are designed to be easier to understand
 by humans. In particular, the goals of XAI is making artificial intelligence
@@ -59,33 +69,45 @@ more:
 
 \todo[inline]{immagine presa dal paper del DARPA}
 
-This effort requires a variety of expertise, from Computer Science to Cognitive Psychology, and there is still a lot of work to do.
+This effort requires a variety of expertise, from Computer Science to Cognitive
+Psychology, and there is still a lot of work to do.
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[scale=1.7]{images/universe}
-%     \caption{The Universe}
-%     \label{fig:universe}
-% \end{figure}
+% \begin{figure}[h!] \centering \includegraphics[scale=1.7]{images/universe}
+%     \caption{The Universe} \label{fig:universe} \end{figure}
 
 %-----------------------------------------------------------------%
 \section{The Explainability Problem}
 
 \subsection{A simple instance: Neural Networks}
 
-Of all the approaches that have been tried during its 50-years history, one has recently emerged as capable of solving many huge, complex and unrelated problems all together: Machine Learning. This particular form of AI is aimed at building a model of a problem from observing many examples of it, and letting the algorithm figure out the best way of connecting inputs and outputs, shaping itself based on what it "learns" from the data. More specifically, one of the most studied and heavily developed approaches right now is Neural Networks, which encodes the information that has been learned as weights in the connections between basic units, called neurons. \note{perchè sto spiegando cos'è una rete neurale?}
+Of all the approaches that have been tried during its 50-years history, one has
+recently emerged as capable of solving many huge, complex and unrelated problems
+all together: Machine Learning. This particular form of AI is aimed at building
+a model of a problem from observing many examples of it, and letting the
+algorithm figure out the best way of connecting inputs and outputs, shaping
+itself based on what it "learns" from the data. More specifically, one of the
+most studied and heavily developed approaches right now is Neural Networks,
+which encodes the information that has been learned as weights in the
+connections between basic units, called neurons. \note{perchè sto spiegando
+    cos'è una rete neurale?}
 
 A conceptual example of what a neural network is is shown in figure ...
 
 \todo[inline]{rappresentazione grafica}
 
-However, this is just a \textit{conceptual} representation. A more accurate representation of what is going on is a series of computations in the form of:
+However, this is just a \textit{conceptual} representation. A more accurate
+representation of what is going on is a series of computations in the form of:
 
 \todo[inline]{rappresentazione matematica}
 
-Which in itself is also an abstraction, since we don't see here how the hardware is effectively calculating and solving these equations.
+Which in itself is also an abstraction, since we don't see here how the hardware
+is effectively calculating and solving these equations.
 
-On the surface, this seems like a technical detail, but this is already the core of the AI Explainability problem: looking at these figures we are trying to get an idea of the \textit{architecture} of the algorithm, but we would have a really hard time if we wanted to correlate what we see with the decisions that are being made by the algorithm.
+On the surface, this seems like a technical detail, but this is already the core
+of the AI Explainability problem: looking at these figures we are trying to get
+an idea of the \textit{architecture} of the algorithm, but we would have a
+really hard time if we wanted to correlate what we see with the decisions that
+are being made by the algorithm.
 
 \subsection{Solution Approaches}
 
@@ -94,7 +116,8 @@ On the surface, this seems like a technical detail, but this is already the core
     \item simplification
     \item reverse engineering/fuzzing (exciting inputs with black box testing)
     \item prototypes
-    \item differential for classifiers (what do I have to change to change the outcome)
+    \item differential for classifiers (what do I have to change to change the
+          outcome)
 \end{enumerate}
 
 Ma come valutare le soluzioni? Basta la complessità?
@@ -102,14 +125,18 @@ Ma come valutare le soluzioni? Basta la complessità?
 %-----------------------------------------------------------------%
 \section{What is missing}
 
-The problem is that there is a lack of a formal definition of how an explanation should be measured. This is not a trivial point, since it is very difficult to quantitatively measure the goodness of any explanation. Many papers refer to complexity but this is not enough.
+The problem is that there is a lack of a formal definition of how an explanation
+should be measured. This is not a trivial point, since it is very difficult to
+quantitatively measure the goodness of any explanation. Many papers refer to
+complexity but this is not enough.
 
 \subsection{Why is there an explainability problem in the first place?}
 
 \begin{itemize}
     \item causality vs correlation
     \item previous categories
-    \item having a goal -> the decision means that I have to do something in practice, and that thing has an ethical an practical impact
+    \item having a goal -> the decision means that I have to do something in
+          practice, and that thing has an ethical an practical impact
 \end{itemize}
 
 \subsection{Explainable \textit{to whom}?}
@@ -154,12 +181,17 @@ The main purpose for XAI are:
 %-----------------------------------------------------------------%
 \section{Conclusion}
 
-In conclusion, the main problem of XAI is that there is no single definition of what an explanation is, it depends on the purpose and on the user of the AI system.
+In conclusion, the main problem of XAI is that there is no single definition of
+what an explanation is, it depends on the purpose and on the user of the AI
+system.
 
-For this reason, these should be considered different problems, at least the debugging problem vs the right of explanation problem: they are not correlated and saying that one solves the other poses some threats on the quality of the result itself.
+For this reason, these should be considered different problems, at least the
+debugging problem vs the right of explanation problem: they are not correlated
+and saying that one solves the other poses some threats on the quality of the
+result itself.
 
 ``I always thought something was fundamentally wrong with the universe''
-\citep{adams1995hitchhiker}
+% \citep{adams1995hitchhiker}
 
 \bibliographystyle{plain}
 \bibliography{references}

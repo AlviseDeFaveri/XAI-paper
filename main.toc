@@ -1,13 +1,13 @@
 \contentsline {section}{\numberline {1}Introduction}{1}%
-\contentsline {subsection}{\numberline {1.1}Artificial Intelligence and its shortcomings}{1}%
-\contentsline {subsection}{\numberline {1.2}XAI: a new frontier of AI research}{2}%
+\contentsline {subsection}{\numberline {1.1}What's the problem with today's AI?}{2}%
+\contentsline {subsection}{\numberline {1.2}XAI: a new frontier of AI research}{3}%
 \contentsline {section}{\numberline {2}The Explainability Problem}{3}%
 \contentsline {subsection}{\numberline {2.1}A simple instance: Neural Networks}{3}%
-\contentsline {subsection}{\numberline {2.2}Solution Approaches}{3}%
-\contentsline {section}{\numberline {3}What is missing}{3}%
+\contentsline {subsection}{\numberline {2.2}Solution Approaches}{4}%
+\contentsline {section}{\numberline {3}What is missing}{4}%
 \contentsline {subsection}{\numberline {3.1}Why is there an explainability problem in the first place?}{4}%
 \contentsline {subsection}{\numberline {3.2}Explainable \textit {to whom}?}{4}%
 \contentsline {subsection}{\numberline {3.3}Explainable \textit {for which purpose}?}{4}%
-\contentsline {subsection}{\numberline {3.4}A multidimensional solution space}{4}%
-\contentsline {subsection}{\numberline {3.5}Can they be measured separately?}{4}%
+\contentsline {subsection}{\numberline {3.4}A multidimensional solution space}{5}%
+\contentsline {subsection}{\numberline {3.5}Can they be measured separately?}{5}%
 \contentsline {section}{\numberline {4}Conclusion}{5}%
