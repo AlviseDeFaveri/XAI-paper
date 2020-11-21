@@ -1,13 +1,19 @@
-\contentsline {section}{\numberline {1}Introduction}{1}%
-\contentsline {subsection}{\numberline {1.1}What's the problem with today's AI?}{2}%
-\contentsline {subsection}{\numberline {1.2}XAI: a new frontier of AI research}{3}%
-\contentsline {section}{\numberline {2}The Explainability Problem}{3}%
-\contentsline {subsection}{\numberline {2.1}A simple instance: Neural Networks}{3}%
-\contentsline {subsection}{\numberline {2.2}Solution Approaches}{4}%
-\contentsline {section}{\numberline {3}What is missing}{4}%
-\contentsline {subsection}{\numberline {3.1}Why is there an explainability problem in the first place?}{4}%
-\contentsline {subsection}{\numberline {3.2}Explainable \textit {to whom}?}{4}%
-\contentsline {subsection}{\numberline {3.3}Explainable \textit {for which purpose}?}{4}%
-\contentsline {subsection}{\numberline {3.4}A multidimensional solution space}{5}%
-\contentsline {subsection}{\numberline {3.5}Can they be measured separately?}{5}%
-\contentsline {section}{\numberline {4}Conclusion}{5}%
+\contentsline {section}{\numberline {I}Introduction}{1}%
+\contentsline {subsection}{\numberline {\mbox {I-A}}Structure of this paper}{1}%
+\contentsline {section}{\numberline {II}Why we have an explainability problem}{2}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Current AI shortcomings}{2}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}The explanation problem: an example with Neural Networks}{2}%
+\contentsline {section}{\numberline {III}The XAI approach}{2}%
+\contentsline {section}{\numberline {IV}What's missing?'}{2}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}What's the problem with today's AI?}{2}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}XAI: a new frontier of AI research}{2}%
+\contentsline {section}{\numberline {V}The Explainability Problem}{2}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}A simple instance: Neural Networks}{2}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Solution Approaches}{3}%
+\contentsline {section}{\numberline {VI}What is missing}{3}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}Why is there an explainability problem in the first place?}{3}%
+\contentsline {subsection}{\numberline {\mbox {VI-B}}Explainable \textit {to whom}?}{3}%
+\contentsline {subsection}{\numberline {\mbox {VI-C}}Explainable \textit {for which purpose}?}{3}%
+\contentsline {subsection}{\numberline {\mbox {VI-D}}A multidimensional solution space}{3}%
+\contentsline {subsection}{\numberline {\mbox {VI-E}}Can they be measured separately?}{3}%
+\contentsline {section}{\numberline {VII}Conclusion}{3}%
