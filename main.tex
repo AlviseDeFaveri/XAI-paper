@@ -79,12 +79,10 @@ XAI is trying to achieve and for which purpose.
 
 In Section~\ref{sec:problem} we will start by looking at some examples  that we consider relevant to understand the XAI problem in detail.
 
-Section~\ref{sec:explainability} provides a classification of the dimensions of the explanation problem: users, purpose, evaluation.
-
 In Section~\ref{sec:xai} we give a more specific definition of XAI and a general
 overview of the solutions that are being developed in this framework.
 
-Finally Section~\ref{sec:notconsidered} contains a reflection on what is not
+Finally Section~\ref{sec:missing} contains a reflection on what is not
 being considered by XAI, in particular: the causality vs correlation problem,
 the problem of measuring the quality of explanations, the biases introduced by
 an explanation, and the problem of measuring the fidelity of an explanation.
@@ -94,7 +92,7 @@ an explanation, and the problem of measuring the fidelity of an explanation.
 
 %-----------------------------------------------------------------%
 \section{Background}
-\label{sec:problem}
+\label{sec:background}
 
 \subsection{Machine Learning}
 \label{sec:ml}
@@ -114,7 +112,7 @@ approaches.
 A particular way of implementing a Machine Learning algorithm is through Artificial Neural Networks (ANN), which are an extremely powerful tool that is being employed for many complex problems nowadays, from computer vision to data analysis, showing unprecedented results. The idea is to have a fixed structure made of interconnected \textit{neurons}, whose connections, called \textit{weights}, are modified in the learning phase by the learning algorithm.
 
 \subsection{Programming AI}
-\label{sec:nn}
+\label{sec:aiprog}
 
 In the aforementioned techniques, the programmer gets to decide only one aspect of the solution, which is the number of layers, neurons and activation functions in the case of Neural Networks, but is not in control of the whole output of the algorithm, which is \textit{learned} using the data it is fed with.
 
@@ -124,7 +122,7 @@ However, what we want to highlight here is that the problem of not having a tota
 
 %-----------------------------------------------------------------%
 \section{The Problem}
-\label{sec:theproblem}
+\label{sec:problem}
 
 \subsection{AI failures}
 \label{sec:aifails}
@@ -186,25 +184,67 @@ by humans. In particular, the goals of XAI is making artificial intelligence
 more:
 
 \begin{itemize}
-    \item \textbf{Easy to debug} and correct, for those who develop and test these systems
-    \item \textbf{Predictable}, so that companies and governments adopting this technology can be aware of the possible weaknesses of a their models, and can be held responsible when using underperformind solutions
-    \item \textbf{Trustful}, for society at great and in particular for consumers or citizens that are affected by the decisions made with or by an AI algorithm
+    \item \textbf{Easy to debug} and correct
+    \item \textbf{Predictable}, so that companies and governments adopting this technology can be aware of the possible weaknesses of a their models, and can be held responsible when using bad algorithms
+    \item \textbf{Trustful} for operators and end-users of this technology
 \end{itemize}
 
 Figure~\ref{fig:xai} is taken from the DARPA presentation on XAI and describes the kind of goals for which it has been proposed.
 
 
 \begin{figure}[h!] \centering \includegraphics[width=\linewidth]{images/xai.png}
-    \caption{The XAI concept} \label{fig:xai} \end{figure}
+    \caption{The XAI concept \todo[inline]{cit} } \label{fig:xai} \end{figure}
 
 The creation of XAI requires the join effort in a variety of research fields, from Computer Science to Cognitive
 Psychology, and there is still a lot of work to do. Nevertheless already many papers have been submitted on the subject \cit, indicating a growing interest of the research community towards this subject.
 
-\subsection{Solution Approaches}
+\subsection{A multitude of approaches}
+\label{sec:dimensions}
+
+An overview of the literature on XAI reveals how solutions presented under the name of XAI may vary greatly in the aspects they consider when presenting their solution. To have an idea of how how varied the solution space is, we might ask ourselves the following questions when analyzing XAI proposals:
+
+\
+
+\textbf{Explainable to whom?} The concept of \textit{user} of an AI system is not always well defined, nor is the concept of user of an explanation. This might include:
+
+\begin{itemize}
+    \item The \textbf{developer} of the AI system, as he is only partially in control of what the algorithm does (refer to Section~\ref{sec:aiprog})
+    \item The \textbf{operator} of an AI system: many AI algorithms nowadays are being used as an input for a human to make decisions on a certain subject
+    \item The \textbf{end user} which is affected by the decision of an AI
+\end{itemize}
+
+\
+
+\textbf{Explainable for which purpose?} Different users have different needs, that can partially overlap, when it comes to AI explanation. More in general, whether a certain representation can be considered and explanation or not depends in some sense on what the explanation is being used for. In the case of XAI, some common purposes are:
+
+\begin{itemize}
+    \item \textbf{Debugging}: finding errors or underperforming portions of the system
+    \item \textbf{Human-in-the-loop}: creating systems where human and AI decisions can co-exist and influence each other
+    \item \textbf{Validation}: understanding if a certain model is good enough to be deployed for a certain tasks, where it fails and what happens when it fails
+    \item \textbf{Appeal AI decisions}: giving the right to users and citizens that are affected by Ai decisions to know, understand and possibly appeal decisions that are automated with Ai systems
+\end{itemize}
+
+This last goal is not explicitly listed in the original scope of XAI goals, but has gained traction recently with the publication of \textit{right for an explanation} law in EU. \cit
+
+\
+
+\textbf{Explainable in which sense?}
+
+One of the main problems of XAI is that there is no unique way of defining how should an explanation be evaluated. Some \cit go even as far as considering the term \textit{interpretabilty} as ill-defined, since there is no consensus on what the definition should be. While we will explore this concept in depth in Section~\ref{sec:missing}, here we propose a classification of some of the dimensions upon which an explanation can be evaluated:
+
+\begin{itemize}
+    \item \textbf{Complexity}: how many elements are there in the explanation?
+    \item \textbf{Clearness}: how cognitively hard is the explanation? How difficult is it to understand the correspondence between the elements of the explanation and the information we are trying to gain?
+    \item \textbf{Informativeness}: how much information, weighted of how meaningful they are, can be extracted by the explanation? E.g. does the information given by the explanation significantly modifies the level of uncertainty that the user has about the Ai behavior?
+    \item \textbf{Fidelity}: how closely does the explanation represent the internal functioning of the system? Do single elements of the explanation have a correspondence to well-defined set of elements in the original structure? How much information is lost when passing from the initial structure to the explanation?
+\end{itemize}
+
+\subsection{Current Solutions}
+\label{sec:solutions}
 
 Given the highly experimental nature of this topic, many different solutions have been proposed by various papers in the framework of XAI, which vary greatly in intended use, goal and adopted approach. Giannotti et al. \cit contains a details and exhaustive description and classification of the existing XAI solutions and their respective strengths and weaknesses. With no aim of being comprehensive or in any way technically precise, here we give a more abstract classification of popular XAI solutions, based their general approach to the problem.
 
-XAI solutions' approaches might be classified as:
+XAI approaches might be classified as:
 
 \begin{enumerate}
     \item \textbf{Visualization}: improving the understanding of a model using a better way to visualize its internals. One popular application of this approach is computer vision, where features of the learned model might be mapped onto the input image. \cit
@@ -213,14 +253,23 @@ XAI solutions' approaches might be classified as:
     \item \textbf{Explain by Example}: a nice information to have when trying to understand an AI model, especially in the case of classifiers, is an example, or a \textit{prototype}, of how the AI thinks that a typical member of a given class should appear. This can be realized in many ways, for example by attaching to a classification output a set of minimal changes to the input that would cause the output to be modified, or specify a partially filled object for each class.
 \end{enumerate}
 
-\todo[inline]{Si può estendere con una classificazione più classica delle tecniche (internal vs external ecc)}
+\todo[inline]{Immagini esemplificative}
+
+\todo[inline]{Si può integrare con una classificazione più classica delle tecniche (internal vs external ecc)}
+
+
 
 %-----------------------------------------------------------------%
 \section{What's missing?}
-\label{sec:notconsidered}
+\label{sec:missing}
 
 
 
+\begin{itemize}
+    \item Correlation vs causality
+    \item Double Standard human vs Machine
+    \item Evaluating an explanation
+\end{itemize}
 
 Ma come valutare le soluzioni? Basta la complessità?
 
@@ -246,43 +295,6 @@ complexity but this is not enough.
     \item fidelity vs clearness
     \item quality vs performance
 \end{itemize}
-
-
-%-----------------------------------------------------------------%
-\section{Dimensions of the problem}
-\label{sec:explainability}
-
-\subsection{Explainable \textit{to whom}?}
-
-The users of an AI systems are:
-
-\begin{itemize}
-    \item end user
-    \item developer
-    \item operator
-    \item judge
-\end{itemize}
-
-\subsection{Explainable \textit{for which purpose}?}
-
-The main purpose for XAI are:v
-
-\begin{itemize}
-    \item debugging of the internals
-    \item human-in-the-loop
-    \item validation and certification
-    \item appeal decisions
-\end{itemize}
-
-\subsection{Explainable with respect to what?}
-
-\begin{itemize}
-    \item complexity
-    \item clearness
-    \item informativeness
-    \item fidelity
-\end{itemize}
-
 
 %-----------------------------------------------------------------%
 
