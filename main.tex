@@ -17,9 +17,9 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-% \title{Trading data biases for cognitive biases:\\some shortcomings of the XAI approach}
+\title{Explanations and cognitive bias:\\an underspoken issue of the XAI approach}
 
-\title{Defining Explainability in the XAI field}
+% \title{Defining Explainability in the XAI field}
 
 \author{\IEEEauthorblockN{Alvise de' Faveri Tron}
     \IEEEauthorblockA{\textit{Politecnico di Milano} \\
@@ -35,57 +35,61 @@
 \section{Introduction}
 \label{sec:intro}
 
-AI has become an increasingly mature technology nowadays, and it has gained an enormous traction especially in the last decade. Amazing results have been reached in this field, so much that some have described this phenomenon as the ``AI singularity'' \cit.
+AI has made giant steps since its birth in the late '50s, especially in the last decade.
+Many tasks that in the past were exclusively carried out by humans, for example
+in the legal, law enforcement and medical fields, are now being automated with AI. This increase in AI's capabilities is a game-changer for today's technology and society, so much that expressions like ``AI singularity'' \cit and ``Fourth industrial revolution'' \cit have been used to describe this phenomenon.
 
-Many tasks that were exclusively carried out by humans in the past, for example
-in the legal, law enforcement and medical fields, are now being considered
-feasible for AI. \cit This poses a new series of challenges to our society,
-which are destined to become more relevant as this technology becomes more
-pervasive.
+
+%\cit This poses a new series of challenges to our society,
+% which are destined to become more relevant as this technology becomes more
+% pervasive.
 
 % by AI systems: some go as far as calling the current period a "fourth
 % industrial revolution" \note{cit} caused by AI or talk about the "AI
 % singularity" \note{cit} referring to the fact that nothing like this has been
 % seen before in human history.
 
-However, AI is far from being perfect: there
-are still many shortcomings in current implementations of this technology.
-AI systems tend to break in a sudden and unpredictable way, and the nature of many AI
-algorithms is such that errors can be difficult to correct or even to identify, remaining undetected for potentially long periods. The problem of understanding AI is not just a usability problem involving the end users, but it also affects the developers of these systems, who are mostly blind
-towards what they build: this is known as the ``black box'' problem in AI. \cit
+However, today's AI is far from being perfect, and our knowledge of this
+technology is still partial and prone to misinterpretations.
 
-Machine Learning and Neural Networks in particular, which are the most common
-and performing AI techniques today, are difficult for humans to debug.
-This poses huge ethical and practical concerns about whether we can trust this technology, especially since it is being employed for tasks that have complex, and sometimes unexpected, ethical consequences. \cit
+AI tends to be unpredictable, and the nature of many AI
+algorithms is such that errors in their internal models can be difficult to
+identify and correct, remaining latent for potentially long periods of time. Machine Learning and Neural Networks in particular, which are central to many AI systems today, are difficult for humans to debug, and there's no such thing as ``fixing one line of code'' in these systems.
 
-Explainable Artificial Intelligence (XAI \cit) is a relatively new field of AI
-that aims at addressing this problem. Many interesting results have been
-achieved in this field, and many more are expected to come in the next years, but there
-are still some fundamental problems that this approach seems to struggle with.
+This is known as the \textit{black box problem} in AI \cit, and it poses huge ethical and practical concerns about whether we can trust this technology or not, especially given the nature of the tasks we expect them to be able to undertake in the future.
 
-In particular, there seems to be a lack of uniform terminology across the
-research community when it comes to XAI. There have been attempts to define the
-notions of ``interpretability'', ``explainability'' along with
-``reliability'',``trustworthiness'' and other similar notions, but there is no
-general consensus on how to formally define and measure these properties.
-\cit
+Explainable Artificial Intelligence (XAI \cit) is a recent field of AI
+that aims at addressing the problem of understanding AI and making it more reliable
+and trustworthy. Many interesting results have been achieved in this field, and
+many more are expected to come in the next years. However, there are still some
+fundamental aspects that this approach seems to struggle with, for example the problem of giving a formal definition of explainability \cit, and others that cannot be solved within the XAI framework alone, for example the problem of distinguishing correlation from causation. \cit[?]
 
-In this paper we want to highlight how the lack of a formal definition of ``explainability" for XAI is not just due to a lack of standardization in this newborn field, but some aspects of this problem have their roots in profound questions about intelligence, thought and cognition, which are still mainly unsolved today. We will try to propose a conceptual framework to define ``explainability'', identifying some of the problem's dimensions, in order to analyze those aspects that are not related to a specific solution. We will highlight how the problem of measuring these dimensions is more than just a technical problem, and that the subjective nature of explainability can cause cognitive biases to be accentuated in the interpretation of an AI output.
+In this paper we want to focus on the problems that arise when using an AI explanation interface as a proxy for measuring the quality of an AI algorithm, and reason about the biases that the explanation itself introduces in this measurement.
+
+We propose a number of metrics over which an explanation can be characterized. In particular we focus on \textit{fidelity}, i.e. the adherence of the explanation to the original system, versus \textit{complexity}, which is the metric that many XAI studies use to evaluate their solutions. Our goal is to show that a tradeoff between these two metrics exists, and that this introduces the possibility for cognitive biases to play a role in evaluating an AI output.
+
+% In particular, there seems to be a lack of uniform terminology across the
+% research community when it comes to XAI. There have been attempts to define the
+% notions of ``interpretability'', ``explainability'' along with
+% ``reliability'',``trustworthiness'' and other similar notions, but there is no
+% general consensus on how to formally define and measure these properties.
+% \cit
+
+% In this paper we want to highlight how the lack of a formal definition of ``explainability" for XAI is not just due to a lack of standardization in this newborn field, but some aspects of this problem have their roots in profound questions about intelligence, thought and cognition, which are still mainly unsolved today. We will try to propose a conceptual framework to define ``explainability'', identifying some of the problem's dimensions, in order to analyze those aspects that are not related to a specific solution. We will highlight how the problem of measuring these dimensions is more than just a technical problem, and that the subjective nature of explainability can cause cognitive biases to be accentuated in the interpretation of an AI output.
 
 In this context, we will use  the words “explainability” and “interpretability”
 interchangeably, as suggested in \cit.
 
 The reminder of this paper is organized as follows.
 
-Section~\ref{sec:background} will provide  some examples that we consider relevant to understand
-the XAI problem in detail.
+Section~\ref{sec:background} provides some examples that we consider relevant to understand the XAI problem in detail.
 
-In Section~\ref{sec:xai} we give a more specific definition of XAI and a general
+Section~\ref{sec:xai} gives a more specific definition of XAI and a general
 overview of the solutions that are being developed in this framework.
 
 Section~\ref{sec:explainability} tries to break down the concept of explainability in several dimensions, which can be used to identify and classify AI explanations.
 
-Finally, in Section~\ref{sec:missing} we highlight the connection between these aspects and some external problems that prevent us from being able to give a precise definition of ``explainability'' for AI, in particular the difference between causality and correlation and the problem of defining intentionality and intelligence for machines.
+Finally, in Section~\ref{sec:missing} we highlight the problem of measuring fidelity and quality in an explanation, and show which cognitive biases could be introduced when examining an AI trough an explanation interface.
 
 %-----------------------------------------------------------------%
 \section{Background}
@@ -116,75 +120,48 @@ Finally, in Section~\ref{sec:missing} we highlight the connection between these 
 
 % \todo[inline]{rimuovere?}
 
-\subsection{AI in practice}
+\subsection{AI today}
 \label{sec:aiprog}
 
-The word ``Artificial Intelligence'' has historically been used with many meanings, even more so today that this subject is receiving a lot of media attention, and the term is being used loosely to indicate a very large and varied set of technologies. Without trying to define the concept of Artificial Intelligence as a whole, which is per-se a matter of debate \cit, we will try to give some distinctive traits of what is commonly refer to as ``AI'' in the modern Computer Science field.
+The term ``Artificial Intelligence'' has historically been used with many different meanings \cit, and this is especially true today that this subject is receiving a lot of media attention. While giving a definition of AI is out of the scope of this paper, in this Section we just want to highlight some aspects of modern AI that motivated the research for a more explainable AI.
 
-For the purpose of this paper, we can define AI as a set of \textit{meta-}algorithms used to explore the solution space of problems that are generally vast and complex, i.e. for which there is no simple a-priori rule that tells us where the (best) solution is.
+First of all, AI algorithms are generally \textit{meta-}algorithms \cit, which means that they provide a recipe to create algorithms that can explore the solution space of a problem in an ``intelligent'' way, whatever meaning might be associated to this term. This means that the same AI algorithm can be used to solve very different problems, such as image recognition and stock market trading strategies.
 
-Let's take for example the problem of recognizing whether an image contains a dog or a cat. The problem is trivial if we want to match the exact image of a specific dog, but it becomes overwhelmingly difficult if we want to construct a set of rules that define what is the shape of a \textit{generic} dog in terms of pixel patterns. Humans have generally no problem at identifying a dog in a photograph even if it's the first time they see it, yet we are not able to express exactly the set of rules that we applied to recognize the ``dogness'' characteristic in that set of pixels.
+Secondly, many modern AI techniques, such as Neural Networks, Genetic Algorithms, Swarm Intelligence etc., have some kind of non-determinism embedded in them: this is due to the fact that in real-world problems typically there is no optimal solution to find, but rather many suboptimal solutions that can be computed in a reasonable time, and adding randomness typically speeds up the process of finding candidate solutions by orders of magnitude.
 
-This is an example of a problem with a vast solution space (the number of patterns that can be recognized in an image of a given size) and no a-priori rule to know which is the best. The fact that the solution space is huge means we cannot think of exploring it exhaustively, so we need an ``intelligent'' way to explore it. This is what AI is about.
+Another aspect of many modern AIs is \textit{learning}. Machine Learning
+techniques generally consist in feeding an algorithm  with a large
+number of instances of a given problem and letting it figure out on its own the
+best way to model it. The strength of this technique is that no previous
+knowledge of the model of the problem is needed, nor it can be enforced
+generally, and this is exactly where it gets an edge over more
+traditional computer science approaches.
 
-One particular aspect that can be found in many of today's top-performing technologies, such as Neural Network, Ant Colony Optimization, Genetic Algorithms etc. is that they are not deterministic: there is no guarantee of finding the best solution in the solution space, nor that the same algorithm will find the same solution if the initial conditions are different. Introducing some kind of randomness has in many cases provided a huge benefit, and since for many complex problems even a best-effort solution is acceptable, this approach has thrived.
+A representation of this idea is provided in Figure~\ref{fig:ml}
 
-A particularly effective technique is Machine Learning, which generally consists in
-\textit{training} an algorithm by giving it as input a large number of
-instances of a given problem and letting it figure out on its own the best way
-to model it. The strength of this technique is that no previous knowledge of
-the model of the problem is needed, nor it can be enforced generally, and this
-is exactly where this technology gets an edge over more traditional computer
-science approaches.
+\begin{figure}[ht!] \centering \includegraphics[width=0.8 \linewidth]{images/ml.png}
+    \caption{Difference between traditional computing an machine learning: while in the former a program is provided to the machine, in the latter it is the machine itself that is able to synthesize it.}
+    \label{fig:ml} \end{figure}
 
-When implementing the aforementioned techniques, the programmer gets to decide
-only some of the aspects of the implementation, e.g. the number of layers, neurons and
-activation functions in the case of Neural Networks, but is not in control of
-the whole output of the algorithm, which is \textit{learned} using the data it
-is fed with. While this is immensely powerful, it is also very problematic from
-the point of view of the developer, which is by design unable to specify all the behavior of the algorithm.
-% %-----------------------------------------------------------------%
-% \section{The Problem} \label{sec:problem}
+% On top of this, many modern algorithms, such as Neural Networks, Ant Colony Optimization, Genetic Algorithms etc., have introduced some kind of non-determinism, which means that slightly different starting points may lead to very different solutions. These algorithms have proved to be very effective and can be applied to many problems, especially those that do not require an optimal solution, since they can explore a huge solution space until the solution is ``good enough''.
 
-\subsection{AI failures}
-\label{sec:aifails}
+These aspects together mean that even the developer of an AI algorithm is not fully in control of all the decisions that the AI system makes, which is one of the main reasons why AI is considered to be a \textit{black box}.
 
-The observation of how AI systems behave in the real world has shown us one
-interesting fact: when these systems break, they tend to break hard. A single
-misprediction made by an AI system can cast a
-shade on the correctness of the whole model itself, on the data it has been
-trained on or on its design. There's rarely such thing as ``fixing one line of
-code" on deep neural networks that have been trained on millions of data points:
-once its trained, you either add more data or start again from scratch, which
-can be a very high price to pay in terms of time and computational power.
 
-\todo[inline]{Esempi concreti invece che claim astratti?}
-
-Moreover, these kind of errors are generally difficult to predict in advance: an
-AI algorithm can perform very well on a high number of inputs, but have a weak
-point that is only discovered way after the AI has been deployed. The same
-people that design and train the algorithm have generally little knowledge about
-what model the network is going to produce at the end, and when it does the only
-way of verifying its correctness is black box testing, for which the input space
-is generally huge.
-
-All these considerations have encouraged the AI industry and the governments to
-tackle the problem of understanding an AI model and "opening" the black box.
-
-\subsection{A toy example}
+\subsection{Explaining AI: a toy example}
 \label{sec:example}
 
-As an example of the problem of explaining an AI system, a representation of a
-Neural Network's conceptual structure is depicted in Figure~\ref{fig:nn}.
+As an example of the problem of explaining an AI system, we can take a look to what it is like to work on a Neural Network. A concept representation of a
+Neural Network's structure is depicted in Figure~\ref{fig:nn}.
 
 \begin{figure}[ht!] \centering \includegraphics[width=0.8 \linewidth]{images/nn}
     \caption{Simple representation of an Artificial Neural Network}
     \label{fig:nn} \end{figure}
 
 The graphical representation is useful for understanding the general
-architecture of a Neural Network, but it doesn't really tell us anything about
+architecture, but it doesn't really tell us anything about
 how the Neural Network actually works, i.e. what is the relationship between a
-certain input and a certain output.
+certain input and its output.
 
 We could give a more precise representation of this dependency in
 Figure~\ref{fig:mathnn}, which explicitly defines the mathematical relationship
@@ -198,18 +175,57 @@ representation.
         equivalent representation} \label{fig:mathnn} \end{figure}
 
 On the other hand, Figure~\ref{fig:dectree} represents a \textit{Decision Tree},
-another family of AI algorithms. While on one hand we can easily agree that this
-type of representation is more intelligible and tells us more about how the AI
-algorithm constructed its model, we have to deal with the fact that Neural
-Networks generally perform better than Decision Trees.
-
+another family of AI algorithms.
 \begin{figure}[ht!] \centering
     \includegraphics[width=0.9\linewidth]{images/dectree} \caption{A simple
         Decision Tree} \label{fig:dectree} \end{figure}
 
+There is a clear difference with the previous example: by looking at the structure of the algorithm we can immediately be sure of what decisions it is going to take, and get a grasp on the chain of reasons that caused a specific output. The main issue of these algorithms is that, for complex problems, they tend to be outperformed by Neural Networks, and the efficient variations of these techniques such as Random Forest greatly increase the complexity of the decision trees, which can grow very big and hence be very hard to understand.
+
 This simple example shows how the solution space to the explainability problem
 has multiple dimensions, constraints and trade-offs that have to be taken into
 account.
+
+\subsection{Bias problems in AI}
+\label{sec:bias}
+
+\todo[inline]{Data bias in AI, demonstrate how vulnerable is AI to biases}
+
+% \subsection{AI failures}
+% \label{sec:aifails}
+
+% First of all, the
+% concept of complexity is different among humans and AIs: what might be simple
+% for a human can be an extremely difficult task for an AI, such as image
+% recognition, natural language processing and coming up with creative ideas. This
+% creates a situation in which even AIs that are able to solve incredibly complex
+% problems will occasionally fail in situations in which a human would have no
+% problem at finding the correct solution. This happens for example in facial
+% recognition, where most systems can be fooled by simply coloring the person's
+% face in a certain way, or by hiding a specific portion of the face that for some
+% reason happens to be important for the AI algorithm. \cit
+
+% Another problem that has been found to affect many AI systems based on Machine
+% Learning is that biased data will generate biased AI models. A famous example of
+% this is the COMPAS algorithm, an algorithm used in US court systems to predict
+% the likelihood that a defendant would become recidivist: due to the data that
+% was used, the model predicted twice as many false positives for recidivism for
+% black offenders (45\%) than white offenders (23\%). \cit Similarly, in 2015
+% Amazon realized that their algorithm used for hiring employees was biased
+% against women: because the algorithm was based on the number of resumes
+% submitted over the past ten years, and since most of the applicants were men, it
+% was trained to favor men over women. \cit The problem of debiasing AIs is still
+% an open problem today, and there is no simple solution to it. \cit
+
+% Finally, AI systems are unpredictable and obscure, even to those who develop
+% them: an AI can seem to behave very well on a given test set, and yet suddenly
+% break or have behave strangely when deployed in the real-world. This happens for example in ``Clever Hans'' situations, a well-known problem of AI, in which an AI might associate the outcome of a problem with an element of the input that in reality is totally unrelated from the pattern that needs to be identified, e.g. an AI system that recognizes the content of a photo based on the copyright notice at the end of it instead of looking to the real content. \cit
+
+% \todo[inline]{flash crash}
+
+% It is important to notice that the problems highlighted in the above examples
+% cannot be associated to any particular module or feature of the AI system itself: there is
+% no such thing as ``fixing one line of code'' for these systems.
 
 %-----------------------------------------------------------------%
 \section{The XAI approach}
@@ -219,29 +235,28 @@ account.
 
 Explainable AI is a concept that was recently formalized in a call for papers
 \todo[inline, inlinewidth=1.5cm, noinlinepar]{rephrase} made by DARPA \cit, the
-same agency where the word "Artificial Intelligence" was born in the first place
+same agency where the term "Artificial Intelligence" was born in the first place
 \cit. It is meant to be describe a new set of Artificial Intelligence systems
 which are designed to be easier to understand by humans. In particular, the
-goals of XAI is making artificial intelligence more:
+goal of XAI is to make Artificial Intelligence more:
 
 \begin{itemize}
-    \item \textbf{Easy to debug} and correct
+    \item \textbf{Easy to debug} for the developers
     \item \textbf{Predictable}, so that companies and governments adopting this
           technology can be aware of the possible weaknesses of a their models,
           and can be held responsible when using bad algorithms
     \item \textbf{Trustful} for operators and end-users of this technology
 \end{itemize}
 
-Figure~\ref{fig:xai} is taken from the DARPA presentation on XAI and describes
-the kind of goals for which it has been proposed.
+Figure~\ref{fig:xai} describes the end result that is expected from XAI.
 
 
 \begin{figure}[h!] \includegraphics[width=\linewidth]{images/xai.png}
-    \caption{The XAI concept \todo[inline]{cit} } \label{fig:xai} \end{figure}
+    \caption{The goal of XAI as expressed in the official DARPA presentation of the XAI project. \todo[inline]{cit},} \label{fig:xai} \end{figure}
 
 The creation of XAI requires the join effort in a variety of research fields,
 from Computer Science to Cognitive Psychology, and there is still a lot of work
-to do. Nevertheless already many papers have been submitted on the subject \cit,
+to do. Nevertheless already many papers have been submitted on the subject,
 indicating a growing interest of the research community towards this subject.
 
 \subsection{Current Solutions}
@@ -249,10 +264,10 @@ indicating a growing interest of the research community towards this subject.
 
 Given the highly experimental nature of this topic, many different solutions
 have been proposed by various papers in the framework of XAI, which vary greatly
-in intended use, goal and adopted approach. Giannotti et al. \cit contains an exhaustive classification of the existing XAI
+in intended use, goal and adopted approach. Giannotti et al. \cit contains a classification of the existing XAI
 solutions and their respective strengths and weaknesses. With no aim of being
-comprehensive or in any way technically precise, here we give a more abstract
-classification of popular XAI solutions, based their general approach to the
+exhaustive, here we give an abstract
+classification of the main XAI solutions, based their general approach to the
 problem.
 
 XAI approaches might be classified as:
