@@ -1,8 +1,61 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{adams1995hitchhiker}
-D.~Adams.
-\newblock {\em The Hitchhiker's Guide to the Galaxy}.
-\newblock San Val, 1995.
+\bibitem[Guidotti et~al.(2018)Guidotti, Monreale, Ruggieri, Turini, Giannotti,
+  and Pedreschi]{Giannotti}
+Riccardo Guidotti, Anna Monreale, Salvatore Ruggieri, Franco Turini, Fosca
+  Giannotti, and Dino Pedreschi.
+\newblock A survey of methods for explaining black box models.
+\newblock \emph{ACM Comput. Surv.}, 51\penalty0 (5), August 2018.
+\newblock ISSN 0360-0300.
+\newblock \doi{10.1145/3236009}.
+\newblock URL \url{https://doi.org/10.1145/3236009}.
+
+\bibitem[Gunning(2017)]{DARPA}
+David Gunning.
+\newblock Darpa's explainable artificial intelligence (xai) program.
+\newblock In \emph{Proceedings of the 24th International Conference on
+  Intelligent User Interfaces}, IUI '19, page~ii, New York, NY, USA, 2017.
+  Association for Computing Machinery.
+\newblock ISBN 9781450362726.
+\newblock \doi{10.1145/3301275.3308446}.
+\newblock URL \url{https://doi.org/10.1145/3301275.3308446}.
+
+\bibitem[Gunning(2018)]{nasaxai}
+David Gunning.
+\newblock Xai for nasa, 2018.
+\newblock URL
+  \url{https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf}.
+
+\bibitem[Lapuschkin et~al.(2019)Lapuschkin, Wäldchen, Binder, Montavon, Samek,
+  and Müller]{cleverhans}
+Sebastian Lapuschkin, Stephan Wäldchen, Alexander Binder, Grégoire Montavon,
+  Wojciech Samek, and Klaus-Robert Müller.
+\newblock Unmasking {Clever} {Hans} predictors and assessing what machines
+  really learn.
+\newblock \emph{Nature Communications}, 10\penalty0 (1):\penalty0 1096,
+  December 2019.
+\newblock ISSN 2041-1723.
+\newblock \doi{10.1038/s41467-019-08987-4}.
+\newblock URL \url{http://www.nature.com/articles/s41467-019-08987-4}.
+
+\bibitem[Lipton(2016)]{mythos}
+Zachary Lipton.
+\newblock The mythos of model interpretability.
+\newblock \emph{Communications of the ACM}, 61, 10 2016.
+\newblock \doi{10.1145/3233231}.
+
+\bibitem[Selbst and Powles(2017)]{righttoexpl}
+Andrew~D Selbst and Julia Powles.
+\newblock {Meaningful information and the right to explanation}.
+\newblock \emph{International Data Privacy Law}, 7\penalty0 (4):\penalty0
+  233--242, 12 2017.
+\newblock ISSN 2044-3994.
+\newblock \doi{10.1093/idpl/ipx022}.
+\newblock URL \url{https://doi.org/10.1093/idpl/ipx022}.
 
 \end{thebibliography}
