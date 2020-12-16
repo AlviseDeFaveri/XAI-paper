@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -30,6 +30,13 @@ David Gunning.
 \newblock Xai for nasa, 2018.
 \newblock URL
   \url{https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf}.
+
+\bibitem[Kim and Song(2020)]{framingeffect}
+Taenyun Kim and Hayeon Song.
+\newblock The effect of message framing and timing on the acceptance of
+  artificial intelligence's suggestion.
+\newblock 04 2020.
+\newblock \doi{10.1145/3334480.3383038}.
 
 \bibitem[Lapuschkin et~al.(2019)Lapuschkin, Wäldchen, Binder, Montavon, Samek,
   and Müller]{cleverhans}

@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{Are we teaching machines how to lie? The potential impact of cognitive bias in AI explanation}
+\title{Explainable AI and cognitive bias: why should we be careful in trusting AI explanations}
 
 % \title{Trusting explanations: what can we expect from XAI?}
 
@@ -38,7 +38,7 @@
     Although this has proven to be a good idea for some purposes and has generated useful tools, such as layer-per-layer visualization of the patterns that are being recognized in deep convolutional networks, there is also a potential risk associated to the creation of a complex intermediate explanation layer, since it is difficult to measure how our decisions are impacted by it. Human
     decision-making is in fact known to be affected by many cognitive bias, for instance the so-called \textit{framing effect}, which happens when our
     decisions are influenced by the way information is presented.
-    If explanation interfaces are not carefully crafted they could, in principle, leverage this kind of cognitive bias to convince a human operator that the internal model is correct, or find a way of presenting it so that the predictions made by the AI are not questioned by human operators.
+    If explanation interfaces are not carefully crafted they could, in principle, leverage this kind of cognitive bias to convince a human operator that the internal model is correct, or find a way of presenting it so that the predictions made by the AI are not questioned.
     % Considering that many XAI solutions focus on reducing the
     % \textit{complexity} of explanations, giving less importance to aspects
     % such as \textit{fidelity} or user understanding, which are much more difficult to measure, there is a real possibility of creating simple interfaces that sound convincing but are not completely accurate. If not counterbalanced by an comprehensive evaluation process, which is lacking today in XAI, could this create an incentive for creating explanation interfaces that are good at lying?
@@ -190,7 +190,7 @@ The term \textit{Explainable AI} refers to methods and techniques in the applica
 \begin{itemize}
     \item \textit{Accountability}: the possibility to identify precise responsibilities when things go wrong in AI.
     \item \textit{Transparency}: the possibility to understand the reasons why AIs behave in a certain way, for both debugging and trust purposes.
-    \item \textit{Fairness}: the possibility to measure possible bias that has been picked up by the Ai model.
+    \item \textit{Fairness}: the possibility to measure possible bias that has been picked up by the AI model.
 \end{itemize}
 
 \begin{figure}[h!] \includegraphics[width=\linewidth]{images/xai.png}
@@ -207,20 +207,21 @@ subject, indicating a growing interest of the research community.
 
 Given the variety of goals of in this field, many different solutions
 have been proposed by various papers in the framework of XAI, which vary greatly
-in intended use and adopted approach. \citet{Giannotti} proposes the following high-level classification for XAI techniques, as shown in Figure~\ref{fig:xaiclass}:
+in intended use and adopted approach.
+% \citet{Giannotti} proposes the following high-level classification for XAI techniques, as shown in Figure~\ref{fig:xaiclass}:
 
-\begin{itemize}
-    \item \textit{Model explanation}: Global explanation of the whole model's behavior.
-    \item \textit{Outcome explanation}: Local explanation of a single outcome.
-    \item \textit{Model inspection}: Explanation trough introspection of the model's internals.
-    \item \textit{Transparent Box design}: Making AI easier to understand by design, e.g. by using algorithms that are intrinsically clearer for humans.
-\end{itemize}
+% \begin{itemize}
+%     \item \textit{Model explanation}: Global explanation of the whole model's behavior.
+%     \item \textit{Outcome explanation}: Local explanation of a single outcome.
+%     \item \textit{Model inspection}: Explanation trough introspection of the model's internals.
+%     \item \textit{Transparent Box design}: Making AI easier to understand by design, e.g. by using algorithms that are intrinsically clearer for humans.
+% \end{itemize}
 
-\begin{figure}[h!] \includegraphics[width=\linewidth]{images/xaiclass.png}
-    \caption{Taxonomy of XAI solutions provided by \citet{Giannotti}} \label{fig:xaiclass} \end{figure}
+% \begin{figure}[h!] \includegraphics[width=\linewidth]{images/xaiclass.png}
+%     \caption{Taxonomy of XAI solutions provided by \citet{Giannotti}} \label{fig:xaiclass} \end{figure}
 
 This paper focuses is in particular on those methods that are based on
-reverse-engineering already existing solutions, also called \textit{post-hoc
+reverse-engineering already existing models, also called \textit{post-hoc
     interpretability}, to create an explanation. This kind of systems are the ones
 that are being mostly developed in the current XAI framework
 (\citet{Giannotti}).
@@ -229,7 +230,7 @@ Existing solutions of this type might be classified referring to \citet{nasaxai}
 
 \begin{enumerate}
     \item \textit{Visualization}: these approaches focus on finding an effective
-          way representation to visually represent key aspects of the AI
+          way to visually represent key aspects of the AI
           behavior. One example is to use \textit{saliency masks}, such as the
           one in Figure~\ref{fig:heatmap}, to highlight which are the most
           significant portions of the input for the AI model.
@@ -254,6 +255,10 @@ Existing solutions of this type might be classified referring to \citet{nasaxai}
           classifiers, is an example, or a \textit{prototype}, of how the AI
           thinks that a typical member of a given class should appear and/or which characteristics should be changed to change the outcome of the classifier.
 \end{enumerate}
+
+While solutions of type 1 (Visualization) give a clear insight on what the AI model is actually doing, they are really effective only in image-based applications. Other types of explanations are more general, but more problematic. In particular, solutions of type 2 (Approximation) suffer from the possibility of over-simplification, which could be misleading, and don't directly represent the internals of the AI model. Solutions of type 3 (Causal Models) are even more distant from the original model, as they try to bridge human-like causal reasoning and statistical correlation, which is the way in which machine learning algorithms generally work. Solutions of type 4 (Learning) add another dimension to this problem, since there is the possibility for machines to \textit{learn} the explanation representation.
+
+These examples already show how the problem of interpretability has multiple dimensions, and the closer we try to get to human reasoning and focus on the user's thinking process, the less we are being explicit on the AI's internals and what is really happening inside the black-box.
 
 %-----------------------------------------------------------------%
 \section{Defining Explainability}
@@ -299,7 +304,7 @@ are:
     \item \textit{Human-in-the-loop}: creating systems where human and AI
           decisions can co-exist and influence each other
     \item \textit{Validation}: understanding if a certain model is good enough
-          to be deployed for a certain tasks, where it fails and what happens
+          to be deployed for a certain task, where it fails and what happens
           when it fails
     \item \textit{Appeal AI decisions}: \footnote{This goal is not
               explicitly listed in the original scope of XAI, but has
@@ -339,7 +344,13 @@ a series of characteristics that are different among different solutions:
           the explanation also applicable to the original system?
 \end{itemize}
 
-Clearly, the choice of the evaluation metric influences the kind of system that we are going to build.
+Clearly, each metric can be more or less important for specific use-cases, but there is also a difference in the way we can measure these characteristics.
+
+Complexity, for instance, is often measured using a proxy such as the number of elements in the explanation, which can be for example the depth of the decision tree in those explanation interfaces that make use them. On the other hand, clearness and informativeness are more difficult to quantify a-priori, but could be empirically evaluated by providing explanations to a human control-group and verify how they respond.
+
+In general, we can identify two ways of evaluating an AI explanation: one is using a direct measurement of some quantity that we can derive directly from the explanation. The second one is considering an explanation itself a black-box, and check if it actually provides a better understanding of the AI model to some selected group of individuals used as a benchmark.
+While the first method is not always feasible, since choosing which quantity is representative of a certain aspect is in itself a difficult decision to make, the second method clearly presents the same problems of opaqueness and unreliability that AI models themselves have.
+
 
 %-----------------------------------------------------------------%
 \section{The troubles of explanations}
@@ -348,25 +359,33 @@ Clearly, the choice of the evaluation metric influences the kind of system that 
 \subsection{Measuring fidelity}
 \label{sec:fidelity}
 
-\begin{enumerate}
-    \item Reality
-    \item Human model
-    \item Machine model
-    \item machine explanation
-\end{enumerate}
+Of all the metrics highlighted in Section~\ref{sec:dimensions}, fidelity, also called \textit{faithfulness} in literature \cit , is probably the most complex aspect to evaluate. On one hand, the maximum fidelity is already represented by the implementation itself, but on the other the reason we need explanations is that the implementation itself is not clear enough. Additionally, it is difficult to isolate this aspect in explanations, as it has to do both with the explanation interface and with how the human user interprets the explanation.
+
+Yet, fidelity plays a fundamental role when we have to evaluate an AI algorithm, as it quantifies the difference between what is being evaluated (the AI model) and the instrument we are using for this evaluation (the AI explanation).
+Figure~\ref{fig:eval} attempts to represent the aspects of AI evaluation through a explanation interface: in this case, a human evaluator needs to compare the AI explanation with his own model of the world and, based on this information, evaluate the correctness of the AI model.
+
+\begin{figure}[ht!] \centering
+    \includegraphics[width=\linewidth]{images/evaluation.png} \caption{Evaluation process of an AI through an explanation interfaces.} \label{fig:eval} \end{figure}
+
+A problem that can be present in this situation is the fact that the AI model and the representation chosen for the explanation could be of very different nature, such as in Causal Models described in Section~\ref{sec:solutions}. If that is the case, does it even make sense to ask ourselves if a causal relationship ``really'' represents the AI model, which typically learns using statistical correlation? And if, on the other hand, both the AI and the explanation are black boxes, how can we be sure that evaluating the AI using that explanation interface will effectively improve our understanding of the underlying AI model? Could we just \textit{think} we are understanding it?
 
 \subsection{Decision making biases}
-\label{sec:tradeoff}
-
-\begin{enumerate}
-    \item Framing effect
-    \item Post-hoc interpretations
-    \item Believe more to complex explanations you don't understand
-\end{enumerate}
-
-\subsection{How can an explanation leverage bias?}
 \label{sec:bias}
 
+Human decision-making is known to be affected by many cognitive bias, which are deeply rooted in our thinking and are often difficult, if not impossible, to exclude when we make decisions. Recently, \citet{framingeffect} has studied the consequences of the \textit{framing effect} in the domain of AI, in particular how likely is a person to accept or reject an AI recommendation based on how the output was framed. An interesting result of this research is, for example, that ``\textit{perceived reasonableness was significantly higher when the suggestion of AI was provided before the decision is made than after the decision is made when perceived accuracy was controlled}''.
+
+While this is not a direct study on AI explanation interfaces, it does show how the same local decision of an AI can be judged differently just varying the timing of the explanation, and a similar result is found about the way the solution is framed.
+
+This goes to show how the evaluation of the correctness of an AI model is not only a subjective matter, but can vary in the same individual depending on factors that are external to the AI behavior itself.
+
+\subsection{Can explanation interfaces learn to exploit cognitive bias?}
+\label{sec:exploit}
+
+As a pure thought experiment, let's imagine a situation where a single individual is in charge of deciding whether an explanation interface is suited for understanding a certain type of AI architecture, e.g. Neural Networks, and let's make the assumption that the only observable elements are the output of the AI model and the explanation provided by the interface. This settings is not far from the one of an operator who acts upon AI recommendations. Let's then suppose that the explanation interface is a complex interface that can convert the model's internals into a human-like reasoning, for example by producing textual motivations for a certain output.
+
+As we demonstrated, it is completely possible that the judgment about the correctness of the algorithm is biased by the way the explanation interface presents the information. Let's now suppose that the same individual has to choose between multiple explanation interfaces and multiple AI models the best couple of model-explainer to be put in production: even if the single explanation interface is not built to learn from the individual's taste, this environment creates a selection for those explanation systems that present information in a way that fits better the idea the individual has about the problem. In particular, an feasible solution to this problem could be a couple in which the explainer is very convincing at justifying the AI model. In absence of other information, the individual has equal probability of selecting the most correct explanation interface and the most accurate AI model, or the most convincing explanation interface coupled with a sub-optimal model.
+
+In this way, we have created a scenario in which an explanation interface that can lie very well is indistinguishable from a very accurate explanation of a convincing model.
 
 %-----------------------------------------------------------------%
 \section{Conclusions}
@@ -374,19 +393,22 @@ Clearly, the choice of the evaluation metric influences the kind of system that 
 
 % critiques:
 % 1. allora non si può fare niente per migliorare l'interpretabilità?
-% 2. lo scenario è troppo unlikely
+% 2. le AI mica hanno lo scopo di fotterti
 % 3. c'è lo stesso problema con ogni rappresentazione allora
 % 4. si può fixare se valuti quanto la spiegazione incrementa la predittività
 %           sì ma c'è sempre il problema del test set vs vita reale
 
-In conclusion, the main problem of XAI is that there is no single definition of
-what an explanation is, it depends on the purpose and on the user of the AI
-system.
+In conclusion, we have showed how the fact that there is no single definition of what interpretability is and no comprehensive way of evaluating all important aspects that compose an explanation leads to the possibility of creating yet another black-box layer over the black-box model, which can accentuate biases instead of reducing them.
 
-For this reason, these should be considered different problems, at least the
-debugging problem vs the right of explanation problem: they are not correlated
-and saying that one solves the other poses some threats on the quality of the
-result itself.
+Some criticisms that can be made to this argument are:
+
+\begin{itemize}
+    \item Does it mean that all XAI solutions are useless? Absolutely not. This is an important research that is fundamental for the future of AI, and the fact that many directions are being explored to solve this problem is just a reflection of how multi-faceted is the problem itself.
+    \item Can't the problem stated in \ref{sec:exploit} be overcome by simply adding more judges? While this is true, the problem of cognitive bias is that it can also be inherited from the group or society around the single individual. Certainly, a diverse control group for evaluating explanations is a must-have, but it is not a complete guarantee of absence of bias.
+    \item Can't errors introduced by the explanation interface be simply corrected by looking at the actual behavior of the AI? If the explanation itself behaves more or less like a black-box, i.e. in those cases in which it is difficult to quantify the explanation's fidelity, there is the same problem that affects AI testing in general: even if testing is done extensively and all results are positive, i.e. the explanation is always perfectly aligned to the AI model, we have no general guarantee that this holds for all the possible outcomes.
+\end{itemize}
+
+In the end, while the proposed argument is just a thought experiment, there are many elements which are realistic and should be paid attention to when devising XAI solutions.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
