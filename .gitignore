@@ -6,3 +6,7 @@ main.synctex.gz
 main.toc
 main.blg
 .vscode
+main.bbl
+main.bcf
+main.out
+main.run.xml

@@ -1,130 +1,697 @@
-\begin{thebibliography}{16}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Buolamwini and Gebru(2018)]{buolamwini2018gender}
-Joy Buolamwini and Timnit Gebru.
-\newblock Gender shades: Intersectional accuracy disparities in commercial
-  gender classification.
-\newblock In \emph{Conference on fairness, accountability and transparency},
-  pages 77--91, 2018.
 
-\bibitem[Dastin(2018)]{hiring}
-Jeffrey Dastin.
-\newblock Amazon scraps secret ai recruiting tool that showed bias against
-  women.
-\newblock \emph{Reuters}, 10 2018.
-\newblock URL
-  \url{https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G}.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{buolamwini2018gender}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=694238e772e190a6c1c2e0c1e68ee000}{%
+           family={Buolamwini},
+           familyi={B\bibinitperiod},
+           given={Joy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2b0ffb56c5d1e4220c16c0258e02eae}{%
+           family={Gebru},
+           familyi={G\bibinitperiod},
+           given={Timnit},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \strng{fullhash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \strng{bibnamehash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \strng{authorbibnamehash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \strng{authornamehash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \strng{authorfullhash}{1d3df5a4e120235c82cc5c5428e6a913}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Conference on fairness, accountability and transparency}
+      \field{title}{Gender shades: Intersectional accuracy disparities in commercial gender classification}
+      \field{year}{2018}
+      \field{pages}{77\bibrangedash 91}
+      \range{pages}{15}
+    \endentry
+    \entry{hiring}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fe0a91ed503170165d701447b4c6fbdf}{%
+           family={Dastin},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fe0a91ed503170165d701447b4c6fbdf}
+      \strng{fullhash}{fe0a91ed503170165d701447b4c6fbdf}
+      \strng{bibnamehash}{fe0a91ed503170165d701447b4c6fbdf}
+      \strng{authorbibnamehash}{fe0a91ed503170165d701447b4c6fbdf}
+      \strng{authornamehash}{fe0a91ed503170165d701447b4c6fbdf}
+      \strng{authorfullhash}{fe0a91ed503170165d701447b4c6fbdf}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reuters}
+      \field{month}{10}
+      \field{title}{Amazon scraps secret AI recruiting tool that showed bias against women}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G
+      \endverb
+      \verb{url}
+      \verb https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G
+      \endverb
+    \endentry
+    \entry{epstein}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e2c60bb6f420e675336064a1f97c2a60}{%
+           family={Epstein},
+           familyi={E\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49a4c5ff1199a681c3041a61c6b3e9c6}{%
+           family={Robertson},
+           familyi={R\bibinitperiod},
+           given={Ronald\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a3425f87bab40003e178bc32c30f9472}
+      \strng{fullhash}{a3425f87bab40003e178bc32c30f9472}
+      \strng{bibnamehash}{a3425f87bab40003e178bc32c30f9472}
+      \strng{authorbibnamehash}{a3425f87bab40003e178bc32c30f9472}
+      \strng{authornamehash}{a3425f87bab40003e178bc32c30f9472}
+      \strng{authorfullhash}{a3425f87bab40003e178bc32c30f9472}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences of the United States of America}
+      \field{month}{08}
+      \field{title}{The search engine manipulation effect (SEME) and its possible impact on the outcomes of elections}
+      \field{volume}{112}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1073/pnas.1419828112
+      \endverb
+    \endentry
+    \entry{explainingexpl}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=0c2149acbf6e1ecbfd1016a17631ab26}{%
+           family={{Gilpin}},
+           familyi={G\bibinitperiod},
+           given={L.\bibnamedelimi H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c4ecfec7adc395bb326161c6369b2b8}{%
+           family={{Bau}},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16685cf56479f0f67558f8e052502085}{%
+           family={{Yuan}},
+           familyi={Y\bibinitperiod},
+           given={B.\bibnamedelimi Z.},
+           giveni={B\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00826b8eaf2f912319c1428518b17f93}{%
+           family={{Bajwa}},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccace510fd2b35c055a7487a7a352501}{%
+           family={{Specter}},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af4ecea4b3fa65e7dc5d9bd792a294d8}{%
+           family={{Kagal}},
+           familyi={K\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cfa11577c57eaca7d43329687c992f7e}
+      \strng{fullhash}{c71c25245340acfdd1943cafa5f5db9f}
+      \strng{bibnamehash}{cfa11577c57eaca7d43329687c992f7e}
+      \strng{authorbibnamehash}{cfa11577c57eaca7d43329687c992f7e}
+      \strng{authornamehash}{cfa11577c57eaca7d43329687c992f7e}
+      \strng{authorfullhash}{c71c25245340acfdd1943cafa5f5db9f}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE 5th International Conference on Data Science and Advanced Analytics (DSAA)}
+      \field{title}{Explaining Explanations: An Overview of Interpretability of Machine Learning}
+      \field{year}{2018}
+      \field{pages}{80\bibrangedash 89}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/DSAA.2018.00018
+      \endverb
+    \endentry
+    \entry{Giannotti}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=da8fc5161754b324b4ac06cdfcb9f51e}{%
+           family={Guidotti},
+           familyi={G\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b005cc0cd264224d2555c63a72d798d}{%
+           family={Monreale},
+           familyi={M\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a76ccbef49119aa2cc87d46090bea705}{%
+           family={Ruggieri},
+           familyi={R\bibinitperiod},
+           given={Salvatore},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=239ddb34b2b1f4cba06ecb606fca3560}{%
+           family={Turini},
+           familyi={T\bibinitperiod},
+           given={Franco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b5335e9010800b63f5c2959f076d90f}{%
+           family={Giannotti},
+           familyi={G\bibinitperiod},
+           given={Fosca},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2cc2c3b41c34d28b00e8b61bf830b42}{%
+           family={Pedreschi},
+           familyi={P\bibinitperiod},
+           given={Dino},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{82f290714ed3cfe5fe35f2e58678f788}
+      \strng{fullhash}{3579dc0dfeb86c4d5f58a6a93ec112a3}
+      \strng{bibnamehash}{82f290714ed3cfe5fe35f2e58678f788}
+      \strng{authorbibnamehash}{82f290714ed3cfe5fe35f2e58678f788}
+      \strng{authornamehash}{82f290714ed3cfe5fe35f2e58678f788}
+      \strng{authorfullhash}{3579dc0dfeb86c4d5f58a6a93ec112a3}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, many accurate decision support systems have been constructed as black boxes, that is as systems that hide their internal logic to the user. This lack of explanation constitutes both a practical and an ethical issue. The literature reports many approaches aimed at overcoming this crucial weakness, sometimes at the cost of sacrificing accuracy for interpretability. The applications in which black box decision systems can be used are various, and each approach is typically developed to provide a solution for a specific problem and, as a consequence, it explicitly or implicitly delineates its own definition of interpretability and explanation. The aim of this article is to provide a classification of the main problems addressed in the literature with respect to the notion of explanation and the type of black box system. Given a problem definition, a black box type, and a desired explanation, this survey should help the researcher to find the proposals more useful for his own work. The proposed classification of approaches to open black box models should also be useful for putting the many research open questions in perspective.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{month}{8}
+      \field{number}{5}
+      \field{title}{A Survey of Methods for Explaining Black Box Models}
+      \field{volume}{51}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1145/3236009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3236009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3236009
+      \endverb
+      \keyw{interpretability,explanations,Open the black box,transparent models}
+    \endentry
+    \entry{DARPA}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25d2cc74dc187d8b48d08bbdae1064da}{%
+           family={Gunning},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Marina del Ray, California}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{fullhash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{bibnamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authorbibnamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authornamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authorfullhash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The DARPA's Explainable Artificial Intelligence (XAI) program endeavors to create AI systems whose learned models and decisions can be understood and appropriately trusted by end users. This talk will summarize the XAI program and present highlights from these Phase 1 evaluations.}
+      \field{booktitle}{Proceedings of the 24th International Conference on Intelligent User Interfaces}
+      \field{isbn}{9781450362726}
+      \field{series}{IUI '19}
+      \field{title}{DARPA's Explainable Artificial Intelligence (XAI) Program}
+      \field{year}{2017}
+      \field{pages}{ii}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/3301275.3308446
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3301275.3308446
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3301275.3308446
+      \endverb
+      \keyw{explanation,machine learning,artificial intelligence,evaluation}
+    \endentry
+    \entry{nasaxai}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25d2cc74dc187d8b48d08bbdae1064da}{%
+           family={Gunning},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{fullhash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{bibnamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authorbibnamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authornamehash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \strng{authorfullhash}{25d2cc74dc187d8b48d08bbdae1064da}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{XAI for NASA}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf
+      \endverb
+      \verb{url}
+      \verb https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf
+      \endverb
+    \endentry
+    \entry{compas}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=dbd9ca00e781035686501814250d2ff7}{%
+           family={Julia\bibnamedelima Angwin},
+           familyi={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Surya\bibnamedelima Mattu},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           suffix={Jeff\bibnamedelima Larson},
+           suffixi={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=2839b86b8666c075c9d0a7fa27fcada6}{%
+           family={Kirchner},
+           familyi={K\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \strng{fullhash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \strng{bibnamehash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \strng{authorbibnamehash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \strng{authornamehash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \strng{authorfullhash}{18adc8a0e24ce3817024c5475e3c0ef6}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ProPublica}
+      \field{title}{Machine Bias}
+      \field{year}{2018}
+    \endentry
+    \entry{framingeffect}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ee1b355e742e4fe00499e48f644ef412}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Taenyun},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7dbd729b83002abad7210d194b4e798c}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Hayeon},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a893d915dc85c8d5e0b536216259a537}
+      \strng{fullhash}{a893d915dc85c8d5e0b536216259a537}
+      \strng{bibnamehash}{a893d915dc85c8d5e0b536216259a537}
+      \strng{authorbibnamehash}{a893d915dc85c8d5e0b536216259a537}
+      \strng{authornamehash}{a893d915dc85c8d5e0b536216259a537}
+      \strng{authorfullhash}{a893d915dc85c8d5e0b536216259a537}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{The Effect of Message Framing and Timing on the Acceptance of Artificial Intelligence's Suggestion}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1145/3334480.3383038
+      \endverb
+    \endentry
+    \entry{cleverhans}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ae7623274e86daf16f369161c4ae78f7}{%
+           family={Lapuschkin},
+           familyi={L\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bb76a7a7d299f38cb689b3f425ea815}{%
+           family={Wäldchen},
+           familyi={W\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d122a2a87d21da4007f460564975e967}{%
+           family={Binder},
+           familyi={B\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0889b25b37f68a2d73747dc5dfcb8a0}{%
+           family={Montavon},
+           familyi={M\bibinitperiod},
+           given={Grégoire},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f49b6382ab4ca917a2aa2249f875f79}{%
+           family={Samek},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{089850e3e5926a72ae1d3b193ecf050d}
+      \strng{fullhash}{c910d3402c8ad9fabf1f7245692abfa0}
+      \strng{bibnamehash}{089850e3e5926a72ae1d3b193ecf050d}
+      \strng{authorbibnamehash}{089850e3e5926a72ae1d3b193ecf050d}
+      \strng{authornamehash}{089850e3e5926a72ae1d3b193ecf050d}
+      \strng{authorfullhash}{c910d3402c8ad9fabf1f7245692abfa0}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Unmasking {Clever} {Hans} predictors and assessing what machines really learn}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{1096}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-019-08987-4
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/s41467-019-08987-4
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/s41467-019-08987-4
+      \endverb
+    \endentry
+    \entry{mythos}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=066882558cbcc7a72a6dac7bb2c46711}{%
+           family={Lipton},
+           familyi={L\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{066882558cbcc7a72a6dac7bb2c46711}
+      \strng{fullhash}{066882558cbcc7a72a6dac7bb2c46711}
+      \strng{bibnamehash}{066882558cbcc7a72a6dac7bb2c46711}
+      \strng{authorbibnamehash}{066882558cbcc7a72a6dac7bb2c46711}
+      \strng{authornamehash}{066882558cbcc7a72a6dac7bb2c46711}
+      \strng{authorfullhash}{066882558cbcc7a72a6dac7bb2c46711}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{month}{10}
+      \field{title}{The Mythos of Model Interpretability}
+      \field{volume}{61}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1145/3233231
+      \endverb
+    \endentry
+    \entry{minsky}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=721c99d43cc522aec6758f403f2b045b}{%
+           family={{Minsky}},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c89ddd384f04453a538d5ad5404faab7}{%
+           family={{Kurzweil}},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=738ab3d9e4e239c4a5d812e3a94f5e7f}{%
+           family={{Mann}},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a4653c9ee043182e48851b40d853d10c}
+      \strng{fullhash}{a4653c9ee043182e48851b40d853d10c}
+      \strng{bibnamehash}{a4653c9ee043182e48851b40d853d10c}
+      \strng{authorbibnamehash}{a4653c9ee043182e48851b40d853d10c}
+      \strng{authornamehash}{a4653c9ee043182e48851b40d853d10c}
+      \strng{authorfullhash}{a4653c9ee043182e48851b40d853d10c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Symposium on Technology and Society (ISTAS): Social Implications of Wearable Computing and Augmediated Reality in Everyday Life}
+      \field{title}{The society of intelligent veillance}
+      \field{year}{2013}
+      \field{pages}{13\bibrangedash 17}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ISTAS.2013.6613095
+      \endverb
+    \endentry
+    \entry{norvig}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=143fa183327d9fcd9de18eec99d6ca97}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall Press}%
+      }
+      \strng{namehash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{bibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorbibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authornamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhash}{b280605b721b4ebcba5395298499f924}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{0136042597}
+      \field{title}{Artificial Intelligence: A Modern Approach}
+      \field{year}{2009}
+    \endentry
+    \entry{righttoexpl}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a507057780ea66f8ee407163b7cec8ff}{%
+           family={Selbst},
+           familyi={S\bibinitperiod},
+           given={Andrew\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=170b2977afb2e68c8c3a488e46cb28dc}{%
+           family={Powles},
+           familyi={P\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \strng{fullhash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \strng{bibnamehash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \strng{authorbibnamehash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \strng{authornamehash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \strng{authorfullhash}{68fa73a1571b6f09b38226927a8ef4a3}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2044-3994}
+      \field{journaltitle}{International Data Privacy Law}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{{Meaningful information and the right to explanation}}
+      \field{volume}{7}
+      \field{year}{2017}
+      \field{pages}{233\bibrangedash 242}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1093/idpl/ipx022
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/idpl/article-pdf/7/4/233/22923065/ipx022.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/idpl/ipx022
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/idpl/ipx022
+      \endverb
+    \endentry
+    \entry{solsman}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7905169bdc590fb3ba715ee13849fc3b}{%
+           family={Solsman},
+           familyi={S\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7905169bdc590fb3ba715ee13849fc3b}
+      \strng{fullhash}{7905169bdc590fb3ba715ee13849fc3b}
+      \strng{bibnamehash}{7905169bdc590fb3ba715ee13849fc3b}
+      \strng{authorbibnamehash}{7905169bdc590fb3ba715ee13849fc3b}
+      \strng{authornamehash}{7905169bdc590fb3ba715ee13849fc3b}
+      \strng{authorfullhash}{7905169bdc590fb3ba715ee13849fc3b}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{cnet}
+      \field{title}{YouTube's AI is the puppet master over most of what you watch}
+      \field{year}{2018}
+    \endentry
+    \entry{tufekci2018youtube}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c37796737bfd689dd28da0a8de150f13}{%
+           family={Tufekci},
+           familyi={T\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{fullhash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{bibnamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authorbibnamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authornamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authorfullhash}{c37796737bfd689dd28da0a8de150f13}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The New York Times}
+      \field{title}{YouTube, the great radicalizer}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{pages}{2018}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem[Epstein and Robertson(2015)]{epstein}
-Robert Epstein and Ronald~E. Robertson.
-\newblock The search engine manipulation effect (seme) and its possible impact
-  on the outcomes of elections.
-\newblock \emph{Proceedings of the National Academy of Sciences of the United
-  States of America}, 112, 08 2015.
-\newblock \doi{10.1073/pnas.1419828112}.
-
-\bibitem[{Gilpin} et~al.(2018){Gilpin}, {Bau}, {Yuan}, {Bajwa}, {Specter}, and
-  {Kagal}]{explainingexpl}
-L.~H. {Gilpin}, D.~{Bau}, B.~Z. {Yuan}, A.~{Bajwa}, M.~{Specter}, and
-  L.~{Kagal}.
-\newblock Explaining explanations: An overview of interpretability of machine
-  learning.
-\newblock In \emph{2018 IEEE 5th International Conference on Data Science and
-  Advanced Analytics (DSAA)}, pages 80--89, 2018.
-\newblock \doi{10.1109/DSAA.2018.00018}.
-
-\bibitem[Guidotti et~al.(2018)Guidotti, Monreale, Ruggieri, Turini, Giannotti,
-  and Pedreschi]{Giannotti}
-Riccardo Guidotti, Anna Monreale, Salvatore Ruggieri, Franco Turini, Fosca
-  Giannotti, and Dino Pedreschi.
-\newblock A survey of methods for explaining black box models.
-\newblock \emph{ACM Comput. Surv.}, 51\penalty0 (5), August 2018.
-\newblock ISSN 0360-0300.
-\newblock \doi{10.1145/3236009}.
-\newblock URL \url{https://doi.org/10.1145/3236009}.
-
-\bibitem[Gunning(2017)]{DARPA}
-David Gunning.
-\newblock Darpa's explainable artificial intelligence (xai) program.
-\newblock In \emph{Proceedings of the 24th International Conference on
-  Intelligent User Interfaces}, IUI '19, page~ii, New York, NY, USA, 2017.
-  Association for Computing Machinery.
-\newblock ISBN 9781450362726.
-\newblock \doi{10.1145/3301275.3308446}.
-\newblock URL \url{https://doi.org/10.1145/3301275.3308446}.
-
-\bibitem[Gunning(2018)]{nasaxai}
-David Gunning.
-\newblock Xai for nasa, 2018.
-\newblock URL
-  \url{https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf}.
-
-\bibitem[Julia~Angwin and Kirchner(2018)]{compas}
-Surya~Mattu Julia~Angwin, Jeff~Larson and Lauren Kirchner.
-\newblock Machine bias.
-\newblock \emph{ProPublica}, 2018.
-
-\bibitem[Kim and Song(2020)]{framingeffect}
-Taenyun Kim and Hayeon Song.
-\newblock The effect of message framing and timing on the acceptance of
-  artificial intelligence's suggestion.
-\newblock 04 2020.
-\newblock \doi{10.1145/3334480.3383038}.
-
-\bibitem[Lapuschkin et~al.(2019)Lapuschkin, Wäldchen, Binder, Montavon, Samek,
-  and Müller]{cleverhans}
-Sebastian Lapuschkin, Stephan Wäldchen, Alexander Binder, Grégoire Montavon,
-  Wojciech Samek, and Klaus-Robert Müller.
-\newblock Unmasking {Clever} {Hans} predictors and assessing what machines
-  really learn.
-\newblock \emph{Nature Communications}, 10\penalty0 (1):\penalty0 1096,
-  December 2019.
-\newblock ISSN 2041-1723.
-\newblock \doi{10.1038/s41467-019-08987-4}.
-\newblock URL \url{http://www.nature.com/articles/s41467-019-08987-4}.
-
-\bibitem[Lipton(2016)]{mythos}
-Zachary Lipton.
-\newblock The mythos of model interpretability.
-\newblock \emph{Communications of the ACM}, 61, 10 2016.
-\newblock \doi{10.1145/3233231}.
-
-\bibitem[{Minsky} et~al.(2013){Minsky}, {Kurzweil}, and {Mann}]{minsky}
-M.~{Minsky}, R.~{Kurzweil}, and S.~{Mann}.
-\newblock The society of intelligent veillance.
-\newblock In \emph{2013 IEEE International Symposium on Technology and Society
-  (ISTAS): Social Implications of Wearable Computing and Augmediated Reality in
-  Everyday Life}, pages 13--17, 2013.
-\newblock \doi{10.1109/ISTAS.2013.6613095}.
-
-\bibitem[Russell and Norvig(2009)]{Norvig}
-Stuart Russell and Peter Norvig.
-\newblock \emph{Artificial Intelligence: A Modern Approach}.
-\newblock Prentice Hall Press, USA, 3rd edition, 2009.
-\newblock ISBN 0136042597.
-
-\bibitem[Selbst and Powles(2017)]{righttoexpl}
-Andrew~D Selbst and Julia Powles.
-\newblock {Meaningful information and the right to explanation}.
-\newblock \emph{International Data Privacy Law}, 7\penalty0 (4):\penalty0
-  233--242, 12 2017.
-\newblock ISSN 2044-3994.
-\newblock \doi{10.1093/idpl/ipx022}.
-\newblock URL \url{https://doi.org/10.1093/idpl/ipx022}.
-
-\bibitem[Solsman(2018)]{solsman}
-Joan Solsman.
-\newblock Youtube's ai is the puppet master over most of what you watch.
-\newblock \emph{cnet}, 2018.
-
-\bibitem[Tufekci(2018)]{tufekci2018youtube}
-Zeynep Tufekci.
-\newblock Youtube, the great radicalizer.
-\newblock \emph{The New York Times}, 10:\penalty0 2018, 2018.
-
-\end{thebibliography}
