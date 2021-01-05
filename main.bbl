@@ -1,9 +1,42 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Buolamwini and Gebru(2018)]{buolamwini2018gender}
+Joy Buolamwini and Timnit Gebru.
+\newblock Gender shades: Intersectional accuracy disparities in commercial
+  gender classification.
+\newblock In \emph{Conference on fairness, accountability and transparency},
+  pages 77--91, 2018.
+
+\bibitem[Dastin(2018)]{hiring}
+Jeffrey Dastin.
+\newblock Amazon scraps secret ai recruiting tool that showed bias against
+  women.
+\newblock \emph{Reuters}, 10 2018.
+\newblock URL
+  \url{https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G}.
+
+\bibitem[Epstein and Robertson(2015)]{epstein}
+Robert Epstein and Ronald~E. Robertson.
+\newblock The search engine manipulation effect (seme) and its possible impact
+  on the outcomes of elections.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America}, 112, 08 2015.
+\newblock \doi{10.1073/pnas.1419828112}.
+
+\bibitem[{Gilpin} et~al.(2018){Gilpin}, {Bau}, {Yuan}, {Bajwa}, {Specter}, and
+  {Kagal}]{explainingexpl}
+L.~H. {Gilpin}, D.~{Bau}, B.~Z. {Yuan}, A.~{Bajwa}, M.~{Specter}, and
+  L.~{Kagal}.
+\newblock Explaining explanations: An overview of interpretability of machine
+  learning.
+\newblock In \emph{2018 IEEE 5th International Conference on Data Science and
+  Advanced Analytics (DSAA)}, pages 80--89, 2018.
+\newblock \doi{10.1109/DSAA.2018.00018}.
 
 \bibitem[Guidotti et~al.(2018)Guidotti, Monreale, Ruggieri, Turini, Giannotti,
   and Pedreschi]{Giannotti}
@@ -31,6 +64,11 @@ David Gunning.
 \newblock URL
   \url{https://asd.gsfc.nasa.gov/conferences/ai/program/003-XAIforNASA.pdf}.
 
+\bibitem[Julia~Angwin and Kirchner(2018)]{compas}
+Surya~Mattu Julia~Angwin, Jeff~Larson and Lauren Kirchner.
+\newblock Machine bias.
+\newblock \emph{ProPublica}, 2018.
+
 \bibitem[Kim and Song(2020)]{framingeffect}
 Taenyun Kim and Hayeon Song.
 \newblock The effect of message framing and timing on the acceptance of
@@ -56,6 +94,20 @@ Zachary Lipton.
 \newblock \emph{Communications of the ACM}, 61, 10 2016.
 \newblock \doi{10.1145/3233231}.
 
+\bibitem[{Minsky} et~al.(2013){Minsky}, {Kurzweil}, and {Mann}]{minsky}
+M.~{Minsky}, R.~{Kurzweil}, and S.~{Mann}.
+\newblock The society of intelligent veillance.
+\newblock In \emph{2013 IEEE International Symposium on Technology and Society
+  (ISTAS): Social Implications of Wearable Computing and Augmediated Reality in
+  Everyday Life}, pages 13--17, 2013.
+\newblock \doi{10.1109/ISTAS.2013.6613095}.
+
+\bibitem[Russell and Norvig(2009)]{Norvig}
+Stuart Russell and Peter Norvig.
+\newblock \emph{Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall Press, USA, 3rd edition, 2009.
+\newblock ISBN 0136042597.
+
 \bibitem[Selbst and Powles(2017)]{righttoexpl}
 Andrew~D Selbst and Julia Powles.
 \newblock {Meaningful information and the right to explanation}.
@@ -64,5 +116,15 @@ Andrew~D Selbst and Julia Powles.
 \newblock ISSN 2044-3994.
 \newblock \doi{10.1093/idpl/ipx022}.
 \newblock URL \url{https://doi.org/10.1093/idpl/ipx022}.
+
+\bibitem[Solsman(2018)]{solsman}
+Joan Solsman.
+\newblock Youtube's ai is the puppet master over most of what you watch.
+\newblock \emph{cnet}, 2018.
+
+\bibitem[Tufekci(2018)]{tufekci2018youtube}
+Zeynep Tufekci.
+\newblock Youtube, the great radicalizer.
+\newblock \emph{The New York Times}, 10:\penalty0 2018, 2018.
 
 \end{thebibliography}
