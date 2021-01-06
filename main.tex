@@ -37,16 +37,15 @@
     and operate on the stock market, many fields have adopted some kind of AI
     system for tasks that would normally require human intelligence. However,
     this kind of technology is known to suffer from interpretability problems:
-    it is often hard for humans to understand why an AI-based system took a
-    particular decision and to identify the general logic behind an AI's
+    it is often hard for humans to understand why AIs take certain decisions and to identify the general logic behind an AI's
     behavior. XAI (short for eXplainable AI) is a research field that aims at
     finding methods to explain these machines' behaviors or individual decisions
     in a way that is intelligible to humans. Although there are great
     opportunities in this field, there is also a risk associated to the creation
     of intermediate explanation layers. Human decision-making is in fact known
     to be affected by cognitive bias, for instance the so-called \textit{framing
-        effect}, which happens when our decisions are influenced by the way
-    information is presented. This paper wants to explore how explanation
+        effect}, which is a bias that occurs when our decisions are influenced by the way
+    information is presented. This paper aims to explore how explanation
     systems could, in principle, leverage decision-making biases to convince
     human operators that their internal model is correct, or present decisions
     in a way that they are not questioned, if these explanation interfaces are
@@ -57,22 +56,22 @@
 \section{Introduction}
 \label{sec:intro}
 
-Artificial Intelligence is an umbrella term that is commonly used to describe a
+Artificial Intelligence is an umbrella term commonly used to describe a
 multitude of technologies and approaches. While a precise definition of this
 term involves many complex aspects, such as defining the meaning of intelligence
 and its relation with human thinking (\cite{norvig}, chapter 1.1), in this
-paper I want to focus on those computing techniques that are currently used to
+paper I will focus on those computing techniques currently used to
 take automated decisions in complex situations, i.e. in which the desired
 behavior cannot be easily synthesized using simple rules.
 
 One of such techniques is Machine Learning, which has enabled many of the recent
 advances in the field. It is used to recognize handwritten digits, people and
-objects in pictures, translate from one language to another, drive cars, and
+objects in pictures, translate from one language to another, drive cars, and to
 suggest photos, videos and posts on platforms such as Facebook and YouTube.
 
 While, on one hand, these techniques have achieved incredible results, and the
 surrounding technology has become mature enough to be employed in fields such as
-medicine, law and finance, on the other hand there is a lot of research that has
+medicine, law and finance, on the other hand a significant number of researches have
 highlighted the social, cultural and political implications of some of the
 side-effects of ML-based systems, for example when they learn biased models or
 spurious correlations.
@@ -102,7 +101,7 @@ form of surveillance, with the biases inherent in surveillance, suggesting HI
 As a natural result of these emerging concerns about AI, the field of
 Explainable AI (XAI) was born. The goal of this research field is to build
 systems that can provide humans with a deeper understanding of AI algorithms,
-with the ultimate objective of making errors and biases more easy to spot or
+with the ultimate objective of making errors and biases easier to spot or
 predict and AI-based systems generally more trustworthy.
 
 Yet, because of the young age of this field and because of the intrinsic
@@ -110,14 +109,14 @@ complexity of the problem, there is still a lack of definition of what
 \textit{explainable} means, and there is a somewhat confused terminology around
 the idea of \textit{interpretability}.
 
-In this paper, I want to analyze some of the extreme consequences of the lack of
+In this paper, I will analyze some of the extreme consequences of the lack of
 such definition, and more generally the lack of a comprehensive way to evaluate
 AI explanations.
 
 Since there is no widely accepted way of evaluating explanations, each
-researcher tends to focus on one or just a few aspects of interpretability.
+scholar tends to focus on one or just a few aspects of interpretability.
 (\cite{Giannotti}) in particular shows that many studies concentrate on the
-\textit{complexity} of the explanation. I want to show in this paper that an
+\textit{complexity} of the explanation. I intend to show in this paper that an
 evaluation system based solely on how easy it is to understand an explanation,
 without taking into account aspects such as fidelity, might produce potentially
 harmful explanation interfaces.
@@ -128,21 +127,21 @@ these explanations, and if this aspect is not taken into account, AI explanation
 could amplify the problem of unconscious biases in technology instead of
 mitigating it.
 
-To explain this idea, I will proceed as follows:
+To explain this idea, I will proceed as follows.
 
-In Section~\ref{sec:background}, I will provide some background on the problems
+Section~\ref{sec:background} provides some background on the problems
 which XAI is trying to solve and a classification of the solutions that are
 currently being developed.
 
-In Section~\ref{sec:explainability}, I will introduce the problem of defining
-interpretability, and propose a classification of the aspects that define an
+Section~\ref{sec:explainability} introduces the problem of defining
+interpretability, and proposes a classification of the aspects that define an
 explanation.
 
-In Section~\ref{sec:troubles}, I will discuss the idea that explanation
+Section~\ref{sec:troubles} discusses the idea that explanation
 interfaces might be able to fool a human user into believing that a specific
 algorithm is doing the right thing, leveraging his or her own bias.
 
-Finally, Section~\ref{sec:counterarg} contains a list of possible critiques to
+Finally, Section~\ref{sec:counterarg} includes a list of possible critiques to
 the ideas expressed in this paper and Section~\ref{sec:conclusions} contains
 some concluding thoughts on this subject.
 
@@ -168,7 +167,7 @@ preference of undecided voters by 20\%.
 
 Challenges such as fake news, biased predictions and filter bubbles make the
 understanding of ML-base curation systems an important and timely concern, but
-there are even more sensitive contexts where defects in AI systems can provoke
+there are even more sensitive contexts where defects in AI systems can lead to
 disastrous consequences.
 
 Some recent studies have shown how subtly gender, race and social biases can be
@@ -183,11 +182,10 @@ bias (\cite{compas}).
 
 More generally, we know that current AI is prone to what are called ``Clever
 Hans moments'': a notorious example is (\cite{cleverhans}), where the classifier
-taken into consideration had learned to recognize image of horses because there
-was a copyright tag that was present in about one-fifth of the horse figures in
+taken into consideration had learned to recognize images of horses from a copyright tag that was present in about one-fifth of the horse figures in
 the training dataset.
 
-This goes to show that, despite the advanced results that have been achieved
+This demonstrates that, despite the advanced results that have been achieved
 with AI and Machine Learning, there are still many problems that require the
 creation of introspection and explanation tools in this field.
 
@@ -230,11 +228,10 @@ humans to understand AI algorithms. We can consider (\cite{DARPA}) as a starting
 point for modern XAI research. Figure~\ref{fig:xai} reports the goals of XAI as
 stated in that paper. The idea is that we want to be able to better understand
 when a given AI-based system is doing something wrong, when we can trust it and
-why an error occurred. All these aspects contribute to improving
-\textit{accountability}, since who makes use of such systems can and must verify
-their behavior, \textit{transparency}, since the reasons for a certain decisions
+why an error occurred. The three main aspects that XAI aims to improve are:
+\textit{accountability}, by enabling vendors, companies and governments to verify the technology they are using or providing, \textit{transparency}, since the reasons for a certain decisions
 are in theory stated in an understandable way, and \textit{fairness}, since
-understanding the reasons enables us to oppose a certain decision.
+understanding the reasons behind automated decisions also enables us to challenge them.
 
 \begin{figure}[h!] \includegraphics[width=\linewidth]{images/xai.png}
     \caption{The goals of XAI as expressed in (\cite{DARPA}). } \label{fig:xai}
@@ -260,7 +257,7 @@ understanding the reasons enables us to oppose a certain decision.
 
 From a general perspective, (\cite{Giannotti}) identifies two families of
 approaches to this problem: \textit{transparent box design}, which aims at
-building algorithms that are more explainable by design, and
+building algorithms that are more interpretable by design, and
 \textit{reverse-engineering} approaches, also called \textit{post-hoc
     interpretability} approaches, which try to provide explanations for already
 existing algorithms.
@@ -314,8 +311,8 @@ indirect connection between elements of the original model and elements of the
 explanation, which is also reflected on the increased complexity of the
 interface itself.
 
-This intuitive idea will be further explored in
-Section~\ref{sec:fidelity} with the concept of \textit{fidelity}.
+This intuitive idea will be further expanded in
+Section~\ref{sec:fidelity} using the concept of \textit{fidelity}.
 
 %-----------------------------------------------------------------%
 \section{Defining Interpretability}
@@ -352,8 +349,7 @@ might include:
 
 \textbf{Explainable for which purpose?} Different users have different needs,
 which may partially overlap. Therefore there is a variety of goals that
-explanations try to accomplish, and some of them might be in contrast with each
-other. Some of these needs are:
+explanations try to accomplish, which are possibly in contrast with each other. Some of these are:
 \begin{itemize}
     \item \textit{Debugging}: finding errors and backtracking them to a specific
           reason
@@ -378,8 +374,7 @@ in mind will have very different notions of what a good explanation is.
 \subsection{Possible Metrics}
 \label{sec:dimensions}
 
-Bearing in mind the different goals that an XAI system can have, we can identify
-a series of characteristics that are different among different solutions:
+Bearing in mind the goals of XAI, there are a number of metrics that can be used to characterize and evaluate a solution:
 
 \begin{itemize}
     \item \textit{Complexity}: how many elements are there in the explanation?
@@ -387,7 +382,7 @@ a series of characteristics that are different among different solutions:
           difficult is it to understand the correspondence between the elements
           of the explanation and the information we are trying to gain?
     \item \textit{Informativeness}: how much information, weighted on how
-          meaningful is is, can be extracted by the explanation? E.g. does the
+          meaningful it is, can be extracted by the explanation? E.g. does the
           explanation significantly modify the level of uncertainty about the AI
           behavior?
     \item \textit{Fidelity}: how closely does the explanation represent the
@@ -438,9 +433,7 @@ systems.
 
 Yet, fidelity plays a fundamental role when we have to evaluate an AI algorithm,
 as it quantifies the difference between what is being evaluated (the AI model)
-and the instrument we are using for this evaluation (the AI explanation). This
-is what we intuitively defined as \textit{distance} between the model and the
-explanation in Section~\ref{sec:solutions}, and represents in some sense the
+and the instrument we are using for this evaluation (the AI explanation). This represents in some sense the
 ``measurement error'' introduced by the explanation.
 
 % Let's take for example the situation depicted in Figure~\ref{fig:eval}: in
@@ -472,7 +465,7 @@ our understanding of the underlying AI model? Couldn't it be that we just
 
 Human decision-making is known to be affected by many cognitive bias, which are
 deeply rooted in our thinking and are often difficult, if not impossible, to
-exclude when we make decisions. Recently, \cite{framingeffect} studied the
+exclude when we make decisions. Recently, (\cite{framingeffect}) studied the
 consequences of the \textit{framing effect} in the domain of AI, in particular
 how likely is a person to accept or reject an AI recommendation based on how the
 output was framed. An interesting result of this research is, for example, that
@@ -481,11 +474,10 @@ output was framed. An interesting result of this research is, for example, that
     when perceived accuracy was controlled}'' (\cite{framingeffect}, page 5).
 
 While this is not a direct study on AI explanation interfaces, it does show how
-the same local decision of an AI can be judged differently just varying the
-timing of the explanation, and a similar result has been found when looking to
-how the solution is framed (positive or negative sentences etc.).
+the same local decision of an AI can be judged differently simply varying the
+timing of the explanation. Similar results have been observed when varying how the explanation is framed (positive or negative sentences etc.).
 
-This goes to show how the evaluation of the correctness of an AI model is not
+This shows how the evaluation of the correctness of an AI model is not
 only a subjective matter, but can vary in the same individual depending on
 factors that are external to the AI behavior itself.
 
@@ -500,10 +492,10 @@ the AI model and the explanation provided by the interface. This setting is not
 far from the one of an operator who acts upon AI recommendations.
 
 Let's then suppose that the explanation interface is a complex interface that
-can convert the model's internals into a human-like reasoning, for example by
+can convert the model's internals into human-like reasoning, for example by
 producing textual motivations for a certain output.
 
-As shown in Section~\ref{sec:bias}, it is completely possible that the judgment
+As shown in Section~\ref{sec:bias}, it is entirely possible that the judgment
 about the correctness of the algorithm is biased by the way the explanation
 interface presents the information. Let's now suppose that the same individual
 has to select,  between multiple explanation interfaces and multiple AI models,
@@ -525,7 +517,7 @@ it could also \textit{lie} without being detected.
 
 
 %-----------------------------------------------------------------%
-\section{Counterarguments}
+\section{Possible Objections}
 \label{sec:counterarg}
 
 Some criticisms that can be made to this argument are:
@@ -548,7 +540,7 @@ Some criticisms that can be made to this argument are:
               respect to the AI model?} While this is a possible solution when the
           explanation is used for debugging purposes, we should not forget that the
           audience of AI explanation is much broader, and it is especially important
-          that non-expert people that are subjected to the decisions of an AI system
+          that non-expert people that are subject to the decisions of an AI system
           are given the possibility to understand them.
 \end{itemize}
 
@@ -556,7 +548,7 @@ Some criticisms that can be made to this argument are:
 \section{Conclusions}
 \label{sec:conclusions}
 
-In conclusion, we have shown how the fact that there is no single definition of
+In conclusion, this paper should have shown how the fact that there is no single definition of
 what interpretability is and no comprehensive way of evaluating simultaneously
 all the important aspects that compose an explanation, especially fidelity,
 leads to the possibility of creating yet another black-box layer over the
